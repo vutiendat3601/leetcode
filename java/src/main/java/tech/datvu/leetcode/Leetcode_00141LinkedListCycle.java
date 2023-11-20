@@ -3,13 +3,12 @@ package tech.datvu.leetcode;
 public class Leetcode_00141LinkedListCycle {
 
     public static boolean hasCycle(ListNode head) {
-        ListNode sl = head;
-        ListNode fs = head;
-
-        while (fs != null && fs.next != null) {
-            sl = sl.next;
-            fs = fs.next.next;
-            if (sl == fs){
+        ListNode p = head;
+        ListNode q = head;
+        while (q != null && q.next != null) {
+            p = p.next;
+            q = q.next.next;
+            if (p == q) {
                 return true;
             }
         }

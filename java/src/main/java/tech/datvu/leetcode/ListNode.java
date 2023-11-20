@@ -70,7 +70,7 @@ public class ListNode {
         return head;
     }
 
-    public static ListNode createFromArray(int[] nums) {
+    public static ListNode createFromArray(int... nums) {
         if (nums.length == 0) {
             return null;
         }

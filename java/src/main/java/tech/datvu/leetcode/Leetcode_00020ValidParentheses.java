@@ -5,14 +5,13 @@ import java.util.Stack;
 public class Leetcode_00020ValidParentheses {
     public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            char preChar = stack.empty() ? ' ' : stack.peek();
-            if (c == ']' && preChar == '[') {
+        for (char c : s.toCharArray()) {
+            char preChar = stack.empty() ? '\0' : stack.peek();
+            if (preChar == '{' && c == '}') {
                 stack.pop();
-            } else if (c == ')' && preChar == '(') {
+            } else if (preChar == '[' && c == ']') {
                 stack.pop();
-            } else if (c == '}' && preChar == '{') {
+            } else if (preChar == '(' && c == ')') {
                 stack.pop();
             } else {
                 stack.push(c);
