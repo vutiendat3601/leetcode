@@ -22,13 +22,25 @@ public class Leetcode_00142LinkedListCycleII {
         return q;
     }
 
+    public static void removeLoop(ListNode loop) {
+        ListNode pre = loop;
+        ListNode tmp = loop.next;
+        while (tmp != loop) {
+            pre = tmp;
+            tmp = tmp.next;
+        }
+        pre.next = null;
+    }
+
     public static void main(String[] args) {
         ListNode n1 = ListNode.createFromArray(3, 2, 0, -4);
-        n1.next.next.next = n1.next;
+        n1.next.next.next.next = n1.next;
         ListNode cycleNode = detectCycle(n1);
         if (cycleNode != null) {
             System.out.println(cycleNode.val);
+            removeLoop(cycleNode);
         }
+        System.out.println("PAUSE");
     }
 
 }
