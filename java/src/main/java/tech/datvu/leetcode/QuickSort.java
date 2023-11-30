@@ -2,11 +2,11 @@ package tech.datvu.leetcode;
 
 import java.util.Arrays;
 
-public class QSort {
+public class QuickSort {
 
     public static void sort(int[] nums, int l, int r) {
         if (l < r) {
-            int mid = l + (r - l)/2;
+            int mid = l + (r - l) / 2;
             sort(nums, l, mid);
             sort(nums, mid + 1, r);
             merge(nums, l, mid, r);

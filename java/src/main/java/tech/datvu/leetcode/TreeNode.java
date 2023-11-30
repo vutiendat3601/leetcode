@@ -51,7 +51,7 @@ public class TreeNode {
     }
 
     // top to down, left to right
-    public static TreeNode createFromArray(Integer[] nodes) {
+    public static TreeNode createFromArray(Integer... nodes) {
         TreeNode head = null;
         Queue<Integer> data = new LinkedList<>(Arrays.asList(nodes));
         if (data.isEmpty()) {
