@@ -1,31 +1,33 @@
 package tech.datvu.leetcode.top150.arraystring;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MajorityElement169 {
-    // ## Map
+    
     public int majorityElement(int[] nums) {
-        Map<Integer, Integer> numberCnts = new HashMap<>();
-        int num = nums[0];
-        numberCnts.put(nums[0], 1);
-        for (int i = 1; i < nums.length; i++) {
-            Integer cnt = numberCnts.get(nums[i]);
-            if (cnt == null) {
-                numberCnts.put(nums[i], 1);
-            } else {
-                cnt++;
-                if (cnt > nums.length / 2) {
-                    return nums[i];
+        int i = 0;
+        int max = nums[0];
+        while (i < nums.length) {
+            int cnt = 0;
+            for (int j = i; j < nums.length; j++) {
+                if (nums[j] == max) {
+                    cnt++;
+                } else {
+                    cnt--;
                 }
-                numberCnts.put(nums[i], cnt);
+                if (cnt == -1) {
+                    max = nums[j];
+                    i = j;
+                    break;
+                }
+                if (j == nums.length - 1) {
+                    i = nums.length;
+                }
             }
         }
-        return num;
+        return max;
     }
 
     public static void main(String[] args) {
-        int[] nums = { 2, 1, 2, 1, 1, 2, 2 };
+        int[] nums = { 2, 2, 1, 1, 1, 2, 2 };
         MajorityElement169 majorityElement169 = new MajorityElement169();
         int res = majorityElement169.majorityElement(nums);
         System.out.println(res);
