@@ -1,5 +1,7 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetocde_02074ReverseNodesinEvenLengthGroups {
 
     public static ListNode reverse(ListNode head, ListNode next) {

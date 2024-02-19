@@ -1,4 +1,7 @@
 package tech.datvu.leetcode.general;
+
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_00092ReverseLinkedListII {
 
     public static ListNode reverse(ListNode head, ListNode next) {

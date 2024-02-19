@@ -1,5 +1,7 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_000160IntersectionofTwoLinkedLists {
 
     public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {

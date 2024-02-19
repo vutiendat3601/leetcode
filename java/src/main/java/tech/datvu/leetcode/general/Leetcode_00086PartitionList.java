@@ -1,5 +1,7 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_00086PartitionList {
     public static ListNode partition(ListNode head, int x) {
         ListNode beforeHead = new ListNode(-101, head);

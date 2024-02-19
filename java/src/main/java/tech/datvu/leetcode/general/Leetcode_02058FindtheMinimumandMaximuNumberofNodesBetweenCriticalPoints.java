@@ -2,6 +2,8 @@ package tech.datvu.leetcode.general;
 
 import java.util.Arrays;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_02058FindtheMinimumandMaximuNumberofNodesBetweenCriticalPoints {
 
     public static int[] nodesBetweenCriticalPoints(ListNode head) {

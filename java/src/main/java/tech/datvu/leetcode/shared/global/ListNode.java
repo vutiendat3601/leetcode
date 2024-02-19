@@ -1,4 +1,4 @@
-package tech.datvu.leetcode.general;
+package tech.datvu.leetcode.shared.global;
 
 public class ListNode {
     public int val;

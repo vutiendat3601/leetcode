@@ -1,5 +1,7 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_00002AddTwoNumbers {
 	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode result = new ListNode(0);

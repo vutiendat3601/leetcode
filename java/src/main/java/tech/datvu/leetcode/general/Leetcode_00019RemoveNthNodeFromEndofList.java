@@ -1,5 +1,7 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_00019RemoveNthNodeFromEndofList {
 
     public static ListNode removeNthFromEnd(ListNode head, int n) {

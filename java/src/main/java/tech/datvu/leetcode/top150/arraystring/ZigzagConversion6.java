@@ -34,7 +34,6 @@ public class ZigzagConversion6 {
     }
 
     public static void main(String[] args) {
-        // String s = "PAYPALISHIRING";
         String s = "PAYPALISHIRING";
 
         int numRows = 3;

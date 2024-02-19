@@ -1,5 +1,7 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_00021MergeTwoSortedLists {
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {

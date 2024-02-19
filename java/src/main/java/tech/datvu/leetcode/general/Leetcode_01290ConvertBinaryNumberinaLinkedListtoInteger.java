@@ -1,5 +1,6 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
 
 public class Leetcode_01290ConvertBinaryNumberinaLinkedListtoInteger {
 

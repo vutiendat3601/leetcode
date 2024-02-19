@@ -1,5 +1,7 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_02326SpiralMatrixIV {
 
     public static int[][] spiralMatrix(int m, int n, ListNode head) {

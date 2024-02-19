@@ -1,5 +1,7 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_02130MaximumTwinSumofaLinkedList {
 
     public static ListNode reverse(ListNode head, ListNode next) {

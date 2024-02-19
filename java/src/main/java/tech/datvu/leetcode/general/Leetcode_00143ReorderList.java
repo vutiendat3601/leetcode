@@ -2,6 +2,8 @@ package tech.datvu.leetcode.general;
 
 import java.util.Stack;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_00143ReorderList {
 
     public static void reorderList(ListNode head) {

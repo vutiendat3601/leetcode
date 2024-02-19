@@ -1,5 +1,7 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_02181MergeNodesinBetweenZeros {
     public static ListNode mergeNodes(ListNode head) {
         ListNode originHead = head;

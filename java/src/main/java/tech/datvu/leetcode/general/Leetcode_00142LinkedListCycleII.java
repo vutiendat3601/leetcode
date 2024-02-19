@@ -1,5 +1,7 @@
 package tech.datvu.leetcode.general;
 
+import tech.datvu.leetcode.shared.global.ListNode;
+
 public class Leetcode_00142LinkedListCycleII {
     public static ListNode detectCycle(ListNode head) {
         ListNode p = head;
