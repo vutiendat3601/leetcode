@@ -1,35 +1,32 @@
 package tech.datvu.leetcode.general;
 
 public class Leetcode_00322CoinChange {
+  private static final int[] NUM_OF_COINS = new int[10001];
 
-    public static int coinChange(int[] coins, int amount) {
-
-        final int MAX_VAL = Integer.MAX_VALUE -1;
-        // Arrays.sort(coins);
-
-        int[][] dp = new int[coins.length + 1][amount + 1];
-        for (int i = 1; i <= amount; i++) {
-            dp[0][i] = MAX_VAL;
+  public static int coinChange(int[] coins, int amount) {
+    NUM_OF_COINS[0] = 0;
+    for (int i = 1; i <= amount; i++) {
+      NUM_OF_COINS[i] = Integer.MAX_VALUE;
+      for (int coin : coins) {
+        if (i - coin == 0) {
+          NUM_OF_COINS[i] = 1;
+        } else if (i - coin > 0 && NUM_OF_COINS[i - coin] != 0) {
+          if (NUM_OF_COINS[i - coin] + 1 < NUM_OF_COINS[i]) {
+            NUM_OF_COINS[i] = NUM_OF_COINS[i - coin] + 1;
+          }
         }
-
-        for (int i = 1; i <= coins.length; i++) {
-            for (int j = 1; j <= amount; j++) {
-                dp[i][j] = dp[i - 1][j];
-                int temp = j / coins[i - 1];
-                if (dp[i - 1][j % coins[i - 1]] < MAX_VAL) {
-                    temp += dp[i - 1][j % coins[i - 1]];
-                }
-                dp[i][j] = Math.min(dp[i][j], temp);
-            }
-        }
-        return dp[coins.length][amount] == MAX_VAL ? -1 : dp[coins.length][amount];
+      }
+      if (NUM_OF_COINS[i] == Integer.MAX_VALUE) {
+        NUM_OF_COINS[i] = 0;
+      }
     }
+    return amount == 0 ? 0 : NUM_OF_COINS[amount] != 0 ? NUM_OF_COINS[amount] : -1;
+  }
 
-    public static void main(String[] args) {
-        int[] coins = { 186, 419, 83, 408 };
-        int amount = 6249;
-        int res = coinChange(coins, amount);
-        System.out.println(res);
-    }
-
+  public static void main(String[] args) {
+    int[] coins = {2};
+    int amount = 3;
+    int res = coinChange(coins, amount);
+    System.out.println(res);
+  }
 }
