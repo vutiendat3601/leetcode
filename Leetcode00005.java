@@ -1,3 +1,10 @@
+/**
+ * 5. Longest Palindromic Substring
+ *
+ * @link https://leetcode.com/problems/longest-palindromic-substring
+ * @author vutiendat3601
+ * @date 2024-06-11
+ */
 public class Leetcode00005 {
 
   public String longestPalindrome(String s) {
