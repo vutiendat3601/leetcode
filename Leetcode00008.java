@@ -35,11 +35,12 @@ public class Leetcode00008 {
         num *= 10;
         num += Integer.parseInt(c + "");
         // Check if the real number smaller than or equals MIN_INTEGER
-        if (num * sign <= Integer.MIN_VALUE) {
+        long result = num * sign;
+        if (result <= Integer.MIN_VALUE) {
           return Integer.MIN_VALUE;
         }
-        // Check if the real number bigger than MAX_INTEGER
-        if (num > Integer.MAX_VALUE) {
+        // Check if the real number bigger than or equals MAX_INTEGER
+        if (result >= Integer.MAX_VALUE) {
           return Integer.MAX_VALUE;
         }
       }
