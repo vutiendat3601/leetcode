@@ -1,3 +1,10 @@
+/**
+ * 11. Container With Most Water
+ *
+ * @link https://leetcode.com/problems/container-with-most-water
+ * @author vutiendat3601
+ * @date 2024-06-19
+ */
 public class Leetcode00011 {
   public int maxArea(int[] height) {
     int begin = 0;
