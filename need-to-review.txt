@@ -1,1 +1,2 @@
 Leetcode00005
+Leetcode00010
