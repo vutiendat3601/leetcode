@@ -7,14 +7,21 @@
  */
 public class Leetcode00153 {
   public int findMin(int[] nums) {
-    final int n = nums.length;
-    int k = -1;
-    for (int step = n; step >= 1; step /= 2) {
-      while (k + step < n && nums[k + step] >= nums[0]) {
-        k += step;
+    int n = nums.length;
+    int begin = 0;
+    int end = n - 1;
+    int ans = 0;
+    while (begin <= end) {
+      int mid = begin + (end - begin) / 2;
+      if (nums[mid] > nums[n - 1]) {
+        begin = mid + 1;
+      } else {
+        ans = mid;
+        end = mid - 1;
       }
     }
-    return k + 1 < n ? nums[k + 1] : nums[0];
+
+    return nums[ans];
   }
 
   public static void main(String[] args) {
