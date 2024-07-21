@@ -54,48 +54,48 @@ public class Leetcode00002 {
     final ListNode result = leetcode00002.addTwoNumbers(l1, l2);
     ListNode.print(result);
   }
-}
-
-class ListNode {
-  int val;
-  ListNode next;
-
-  ListNode() {}
-
-  ListNode(int val) {
-    this.val = val;
-  }
-
-  ListNode(int val, ListNode next) {
-    this.val = val;
-    this.next = next;
-  }
-
-  @Override
-  public String toString() {
-    return String.valueOf(val);
-  }
-
-  static ListNode from(int... nums) {
-    final ListNode beforeHead = new ListNode();
-    if (nums != null && nums.length > 0) {
-      beforeHead.next = new ListNode(nums[0]);
-      ListNode head = beforeHead.next;
-      for (int i = 1; i < nums.length; i++) {
-        head.next = new ListNode(nums[i]);
-        head = head.next;
-      }
+  
+  static class ListNode {
+    int val;
+    ListNode next;
+  
+    ListNode() {}
+  
+    ListNode(int val) {
+      this.val = val;
     }
-    return beforeHead.next;
-  }
-
-  static void print(ListNode head) {
-    if (head != null) {
-      while (head.next != null) {
-        System.out.print(head.val + "->");
-        head = head.next;
+  
+    public ListNode(int val, ListNode next) {
+      this.val = val;
+      this.next = next;
+    }
+  
+    @Override
+    public String toString() {
+      return String.valueOf(val);
+    }
+  
+    public static ListNode from(int... nums) {
+      final ListNode beforeHead = new ListNode();
+      if (nums != null && nums.length > 0) {
+        beforeHead.next = new ListNode(nums[0]);
+        ListNode head = beforeHead.next;
+        for (int i = 1; i < nums.length; i++) {
+          head.next = new ListNode(nums[i]);
+          head = head.next;
+        }
       }
-      System.out.println(head.val);
+      return beforeHead.next;
+    }
+  
+    public static void print(ListNode head) {
+      if (head != null) {
+        while (head.next != null) {
+          System.out.print(head.val + "->");
+          head = head.next;
+        }
+        System.out.println(head.val);
+      }
     }
   }
 }
